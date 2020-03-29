@@ -20,7 +20,10 @@
 								}}/{{ data.senderId.picId }}"
 								class="circle"
 							/>
-							<span [ngClass]="data.read ? 'isRead' : 'unread'">
+							<span
+								[ngClass]="data.read ? 'isRead' : 'unread'"
+								(click)="MarkNotification(data)"
+							>
 								{{ data.message }}
 							</span>
 							<p class="time">{{ TimeFromNow(data.created) }}</p>

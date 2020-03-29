@@ -24,6 +24,8 @@ import { NgxAutoScrollModule } from 'ngx-auto-scroll';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { ImagesComponent } from '../components/images/images.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { ViewUserComponent } from '../components/view-user/view-user.component';
+import { ChangePasswordComponent } from '../components/change-password/change-password.component';
 
 @NgModule({
 	declarations: [
@@ -40,7 +42,9 @@ import { FileUploadModule } from 'ng2-file-upload';
 		TopStreamsComponent,
 		ChatComponent,
 		MessageComponent,
-		ImagesComponent
+		ImagesComponent,
+		ViewUserComponent,
+		ChangePasswordComponent
 	],
 	imports: [
 		CommonModule,

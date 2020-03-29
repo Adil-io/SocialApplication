@@ -31,10 +31,11 @@
 }
 
 .postImage {
-	width: 100% !important;
+	width: 40vw !important;
 	margin: 0 auto !important;
-	left: 20px !important;
-	top: 10px !important;
+	left: 5px !important;
+	top: 5px !important;
+	height: 70vh;
 }
 
 .card-image {

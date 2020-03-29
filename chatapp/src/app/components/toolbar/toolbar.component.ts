@@ -111,6 +111,15 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
 		}
 	}
 
+	MarkNotification(data) {
+		if (!data.read) {
+			this.usersService.MarkNotification(data._id).subscribe(value => {
+				//console.log('You marked and clicked me');
+				this.socket.emit('refresh', {});
+			});
+		}
+	}
+
 	MarkAll() {
 		this.usersService.MarkAllAsRead().subscribe(data => {
 			//console.log(data);

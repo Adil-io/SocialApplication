@@ -62,4 +62,12 @@ export class UsersService {
 		);
 		// return this.http.get(`${BASEURL}/set-deffault-image?id=${imageId}?version=${imageVersion}`);
 	}
+
+	ProfileNotifications(id): Observable<any> {
+		return this.http.post(`${BASEURL}/user/view-profile`, { id });
+	}
+
+	ChangePassword(body): Observable<any> {
+		return this.http.post(`${BASEURL}/change-password`, body);
+	}
 }

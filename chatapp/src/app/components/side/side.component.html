@@ -4,7 +4,7 @@
 		[routerLinkActive]="['']"
 		[routerLinkActiveOptions]="{ exact: true }"
 	>
-		<a [routerLink]="['/streams']">
+		<a *ngIf="userData" [routerLink]="['', userData.username]">
 			<span>Posts</span>
 			<p class="num" *ngIf="userData">
 				{{ userData.posts.length }}
@@ -118,6 +118,19 @@
 			<div>
 				Notifications<a href="#!" class="secondary-content"
 					><i class="material-icons">alarm</i></a
+				>
+			</div>
+		</a>
+	</li>
+	<li
+		class="collection-item"
+		[routerLinkActive]="['active']"
+		[routerLinkActiveOptions]="{ exact: true }"
+	>
+		<a [routerLink]="['/account', 'password']">
+			<div>
+				Change Password<a href="#!" class="secondary-content"
+					><i class="material-icons">vpn_key</i></a
 				>
 			</div>
 		</a>
