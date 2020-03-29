@@ -51,4 +51,15 @@ export class UsersService {
 			all: true
 		});
 	}
+
+	AddImage(image): Observable<any> {
+		return this.http.post(`${BASEURL}/upload-image`, { image });
+	}
+
+	SetDefaultImage(imageId, imageVersion): Observable<any> {
+		return this.http.get(
+			`${BASEURL}/set-default-image/${imageId}/${imageVersion}`
+		);
+		// return this.http.get(`${BASEURL}/set-deffault-image?id=${imageId}?version=${imageVersion}`);
+	}
 }

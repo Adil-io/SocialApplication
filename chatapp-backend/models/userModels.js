@@ -35,6 +35,14 @@ const userSchema = mongoose.Schema({
 			receiverId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 			msgId: { type: mongoose.Schema.Types.ObjectId, ref: 'Message' }
 		}
+	],
+	picVersion: { type: String, default: '1585468589' },
+	picId: { type: String, default: 'default-male_viaasq.png' },
+	images: [
+		{
+			imgId: { type: String, default: '' },
+			imgVersion: { type: String, default: '' }
+		}
 	]
 });
 

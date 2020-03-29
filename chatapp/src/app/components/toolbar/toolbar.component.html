@@ -14,7 +14,12 @@
 							*ngFor="let data of notifications"
 							[ngClass]="data.read ? 'isRead-item' : 'unread-item'"
 						>
-							<img src="http://placehold.it/50x50" class="circle" />
+							<img
+								src="https://res.cloudinary.com/anheart/image/upload/v{{
+									data.senderId.picVersion
+								}}/{{ data.senderId.picId }}"
+								class="circle"
+							/>
 							<span [ngClass]="data.read ? 'isRead' : 'unread'">
 								{{ data.message }}
 							</span>
@@ -40,7 +45,12 @@
 							*ngFor="let chat of chatList"
 							(click)="GoToChatPage(chat.receiverId.username)"
 						>
-							<img src="http://placehold.it/50x50" class="circle" />
+							<img
+								src="https://res.cloudinary.com/anheart/image/upload/v{{
+									chat.receiverId.picVersion
+								}}/{{ chat.receiverId.picId }}"
+								class="circle"
+							/>
 							<span class="title">
 								{{ chat.receiverId.username }}
 								<a class="secondary-content">
@@ -93,7 +103,9 @@
 			<div class="nav-div">
 				<img
 					class="circle responsive-img"
-					src="http://placehold.it/50x50"
+					src="https://res.cloudinary.com/anheart/image/upload/v{{
+						imageVersion
+					}}/{{ imageId }}"
 					alt="Image not Available"
 				/>
 			</div>
